@@ -114,7 +114,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
     parts.shift()
     const instanceIdSuffix = parts.shift()
     const generatorName = parts.shift()
-    const parameter = parts.join(':')
+    const config = parts.join(':')
 
     const todo = new TodoGenerator({
       fieldName: this.getFieldName(meta.name || type),
@@ -122,7 +122,7 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
       tableType: this.table.tableType,
       testcaseName: this.name,
       generatorName,
-      parameter,
+      config,
       instanceIdSuffix,
       meta,
     })
