@@ -4,7 +4,7 @@ import {
   TodoGenerator,
   TodoReference,
   TodoStatic,
-} from '@xhubioTable/model'
+} from '@xhubiotable/model'
 
 /**
  * A test case is one column in the test case part

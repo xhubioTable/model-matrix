@@ -1,5 +1,5 @@
 import TestcaseDefinition from './TestcaseDefinition'
-import { TableInterface } from '@xhubioTable/model'
+import { TableInterface } from '@xhubiotable/model'
 
 export const TABLE_TYPE = 'matrix-table'
 

@@ -1,18 +1,21 @@
 {
-  "name": "@xhubioTable/model-matrix",
+  "name": "@xhubiotable/model-matrix",
   "version": "0.0.4",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "decision-table"
   ],
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xhubioTable/model-matrix.git"
+    "url": "https://github.com/xhubiotable/model-matrix.git"
   },
   "bugs": {
-    "url": "https://github.com/xhubioTable/model-matrix/issues"
+    "url": "https://github.com/xhubiotable/model-matrix/issues"
   },
-  "homepage": "https://github.com/xhubioTable/model-matrix#readme",
+  "homepage": "https://github.com/xhubiotable/model-matrix#readme",
   "scripts": {
     "build": "npm run src_format && npm run src_lint && babel src -d lib",
     "src_lint": "eslint src tests",
@@ -42,7 +45,7 @@
     "babel-preset-flow": "6.23.0",
     "babel-register": "6.26.0",
     "cz-conventional-changelog": "2.1.0",
-    "eslint": "5.3.0",
+    "eslint": "5.4.0",
     "eslint-config-prettier": "3.0.1",
     "eslint-plugin-babel": "5.1.0",
     "jest": "23.5.0",
@@ -50,9 +53,9 @@
     "jest-environment-node-debug": "2.0.0",
     "prettier": "1.14.2",
     "regenerator-runtime": "0.12.1",
-    "semantic-release": "15.9.8"
+    "semantic-release": "15.9.9"
   },
   "dependencies": {
-    "@xhubioTable/model": "0.0.4"
+    "@xhubiotable/model": "1.0.2"
   }
 }
