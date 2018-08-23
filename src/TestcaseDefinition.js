@@ -37,6 +37,9 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
     return name
   }
 
+  /**
+   * Getter für die execute Eigenschaft
+   */
   get execute() {
     if (
       this.data !== undefined &&
