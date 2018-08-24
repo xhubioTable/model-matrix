@@ -10,12 +10,12 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xhubiotable/model-matrix.git"
+    "url": "https://github.com/xhubioTable/model-matrix.git"
   },
   "bugs": {
-    "url": "https://github.com/xhubiotable/model-matrix/issues"
+    "url": "https://github.com/xhubioTable/model-matrix/issues"
   },
-  "homepage": "https://github.com/xhubiotable/model-matrix#readme",
+  "homepage": "https://github.com/xhubioTable/model-matrix#readme",
   "scripts": {
     "build": "npm run src_format && npm run src_lint && babel src -d lib",
     "src_lint": "eslint src tests",
