@@ -1,12 +1,15 @@
-== Matrix Table
-This table is used to defined changes on an existing state of an application.
-For example the is a decision table for creating a payment. Then this table
-may use the created payment as an input and defines rules to bring it to the next state.
+== Predecessor Successor Matrix Table
+Predecessor Successor Matrix Table  (short: matrix table) is used to defined changes on an existing state of an application.
+For example there is a decision table for creating an account. Then this table
+may use the created account to add transaction on that account.
 
 The table has a source part and an actions part. The source part refers to a current state.
 The action part defines which state change should be applied.
 
 The Matrix itself defines which actions to be applied on which source state.
+
+
+=== Table Layout
 
 .The matrix table
 image::images/model-matrix/table.jpg[]
@@ -29,4 +32,5 @@ the source is to the left side.
 .The action part of the table
 image::images/model-matrix/actions.jpg[]
 
-On the right side the action part is located.
+On the right side the action part is located. But this is up to you. The generator
+of the table needs to handle the order in which the generators are executed.
