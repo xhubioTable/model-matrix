@@ -121,13 +121,14 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
 
     const todo = new TodoGenerator({
       fieldName: this.getFieldName(meta.name || type),
-      tableName: this.table.name,
-      tableType: this.table.tableType,
+      tableName: this.tableName,
+      tableType: this.tableType,
       testcaseName: this.name,
       generatorName,
       config,
       instanceIdSuffix,
       meta,
+      testcaseMeta: this.metaInformation,
     })
 
     return todo
@@ -150,14 +151,15 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
 
     const todo = new TodoReference({
       fieldName: this.getFieldName(meta.name || type),
-      tableName: this.table.name,
-      tableType: this.table.tableType,
+      tableName: this.tableName,
+      tableType: this.tableType,
       testcaseName: this.name,
       targetTableName,
       targetFieldName,
       targetTestcaseName,
       instanceIdSuffix,
       meta,
+      testcaseMeta: this.metaInformation,
     })
 
     return todo
@@ -173,11 +175,12 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
   _createStaticValueTodo(generatorCmd, type, meta) {
     const todo = new TodoStatic({
       fieldName: this.getFieldName(meta.name || type),
-      tableName: this.table.name,
-      tableType: this.table.tableType,
+      tableName: this.tableName,
+      tableType: this.tableType,
       testcaseName: this.name,
       value: generatorCmd,
       meta,
+      testcaseMeta: this.metaInformation,
     })
 
     return todo
@@ -197,8 +200,8 @@ export default class TestcaseDefinition extends TestcaseDefinitionInterface {
       if (val !== undefined) {
         const todo = new TodoMeta({
           fieldName: section.name,
-          tableName: this.table.name,
-          tableType: this.table.tableType,
+          tableName: this.tableName,
+          tableType: this.tableType,
           testcaseName: this.name,
           meta: {
             key: section.keys[dataRowId],
