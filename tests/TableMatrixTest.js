@@ -30,6 +30,7 @@ test('Test getTestcaseForName', () => {
   delete tc.table
   delete tc.logger
   expect(tc).toEqual({
+    _neverExecute: false,
     column: 2,
     data: 'x',
     meta: {
@@ -51,6 +52,7 @@ test('Test getTestcasesForExecution', () => {
    */
   function createExpected(row, column) {
     return {
+      _neverExecute: false,
       data: MODEL.data[row][column],
       row,
       column,

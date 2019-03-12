@@ -26,6 +26,7 @@ test('TestcaseDefinition creation with opts', () => {
   delete tc.id
   delete tc.logger
   expect(tc).toEqual({
+    _neverExecute: false,
     column: 2,
     data: '',
     meta: { column: 'colMeta', row: 'rowMeta' },
