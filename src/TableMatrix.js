@@ -1,4 +1,4 @@
-import TestcaseDefinition from './TestcaseDefinition'
+import TestcaseDefinitionMatrix from './TestcaseDefinitionMatrix'
 import { TableInterface } from '@xhubiotable/model'
 
 export const TABLE_TYPE = 'matrix-table'
@@ -67,7 +67,7 @@ export class TableMatrix extends TableInterface {
       throw new Error(`The testcase name '${testcaseName}' is out of range`)
     }
 
-    const tc = new TestcaseDefinition({
+    const tc = new TestcaseDefinitionMatrix({
       row,
       column,
       data: this.data[row][column],
