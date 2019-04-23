@@ -1,19 +1,19 @@
 'use strict'
 
-import { TestcaseDefinition } from '../lib/index'
+import { TestcaseDefinitionMatrix } from '../lib/index'
 
 test('Test create Object', () => {
-  const tc = new TestcaseDefinition()
+  const tc = new TestcaseDefinitionMatrix()
   expect(tc).not.toBeNull()
 })
 
 test('Empty testcase is not executeable', () => {
-  const tc = new TestcaseDefinition()
+  const tc = new TestcaseDefinitionMatrix()
   expect(tc.execute).toBeFalsy()
 })
 
-test('TestcaseDefinition creation with opts', () => {
-  const tc = new TestcaseDefinition({
+test('TestcaseDefinitionMatrix creation with opts', () => {
+  const tc = new TestcaseDefinitionMatrix({
     row: 1,
     column: 2,
     data: '',

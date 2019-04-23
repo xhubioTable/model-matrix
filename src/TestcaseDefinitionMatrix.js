@@ -9,7 +9,7 @@ import {
 /**
  * A test case is one column in the test case part
  */
-export default class TestcaseDefinition extends TestcaseDefinitionInterface {
+export default class TestcaseDefinitionMatrix extends TestcaseDefinitionInterface {
   constructor(opts = {}) {
     super(opts)
 

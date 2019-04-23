@@ -1,4 +1,4 @@
 import { TableMatrix, TABLE_TYPE } from './TableMatrix'
-import TestcaseDefinition from './TestcaseDefinition'
+import TestcaseDefinitionMatrix from './TestcaseDefinitionMatrix'
 
-export { TableMatrix, TABLE_TYPE, TestcaseDefinition }
+export { TableMatrix, TABLE_TYPE, TestcaseDefinitionMatrix }
