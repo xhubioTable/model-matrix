@@ -7,16 +7,17 @@ import {
 } from '@xhubiotable/model'
 
 /**
- * A test case is one column in the test case part
+ * A test case is one cell in the table.
+ * @extends TestcaseDefinitionInterface
  */
 export default class TestcaseDefinitionMatrix extends TestcaseDefinitionInterface {
   constructor(opts = {}) {
     super(opts)
 
-    // the row this testcase comes from
+    /** the row this test case comes from */
     this.row = opts.row ? parseInt(opts.row, 10) : undefined
 
-    // the row this column comes from
+    /** the column this test case comes from */
     this.column = opts.column ? parseInt(opts.column, 10) : undefined
 
     // meta.column = column meta
@@ -24,6 +25,11 @@ export default class TestcaseDefinitionMatrix extends TestcaseDefinitionInterfac
     this.meta = opts.meta
   }
 
+  /**
+   * The name of this testcase. With this name the
+   * testcase could be found in the table.
+   * The name in a matrix table has the following format: 'r<row>:c<column>'
+   */
   get name() {
     return `r${this.row}:c${this.column}`
   }
@@ -38,7 +44,7 @@ export default class TestcaseDefinitionMatrix extends TestcaseDefinitionInterfac
   }
 
   /**
-   * Getter für die execute Eigenschaft
+   * Should this test case be executed or is it only for a reference
    */
   get execute() {
     if (

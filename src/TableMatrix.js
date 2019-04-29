@@ -3,6 +3,10 @@ import { TableInterface } from '@xhubiotable/model'
 
 export const TABLE_TYPE = 'matrix-table'
 
+/**
+ * This is the
+ * @extends TableInterface
+ */
 export class TableMatrix extends TableInterface {
   constructor(opts = {}) {
     super(opts)
@@ -43,12 +47,17 @@ export class TableMatrix extends TableInterface {
     this.data = opts.data || []
   }
 
+  /**
+   * Stores the type of the table
+   * @return {string} The type of this table.
+   */
   get tableType() {
     return TABLE_TYPE
   }
 
   /**
-   * Returns the testcase for the given name. If not found it will throw an exception
+   * Returns the testcase for the given name. If not found it will throw an exception.
+   * The name in a mtrix table has the following format: 'r<row>:c<column>'
    * @param testcaseName {string} The name of the testcase
    * @return testcaseDefinition {object} returns the testcase definition
    */
@@ -90,6 +99,8 @@ export class TableMatrix extends TableInterface {
 
   /**
    * This generator returns all the testcases which should be executed
+   * @generator
+   * @yields {testcaseDefinitionInterface}
    */
   *getTestcasesForExecution() {
     for (let row = 0; row < this.data.length; row++) {
@@ -118,7 +129,7 @@ export class TableMatrix extends TableInterface {
   }
 
   /**
-   * Parses a testcase name. If the name is a range it will return an
+   * Parses a testcase name given in a reference. If the name is a range it will return an
    * Array of names. For example the name 'tc12-14' will be expended to:
    * tc12, tc13, tc14
    * @param testcaseName {string} The reference test case name
