@@ -1,4 +1,4 @@
-import { TableMatrix } from '../lib/index'
+import { TableMatrix } from '../src/index'
 
 const TEST_DATA = [
   ['r1:c3', ['r1:c3'], 'No range'],

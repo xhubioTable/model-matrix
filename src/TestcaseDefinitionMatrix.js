@@ -201,7 +201,7 @@ export default class TestcaseDefinitionMatrix extends TestcaseDefinitionInterfac
     const rowIds = section.dataRows
     const todos = []
 
-    rowIds.forEach(dataRowId => {
+    rowIds.forEach((dataRowId) => {
       const val = this.data[dataRowId]
       if (val !== undefined) {
         const todo = new TodoMeta({

@@ -1,6 +1,6 @@
 'use strict'
 
-import { TestcaseDefinitionMatrix } from '../lib/index'
+import { TestcaseDefinitionMatrix } from '../src/index'
 
 test('Test create Object', () => {
   const tc = new TestcaseDefinitionMatrix()

@@ -1,6 +1,6 @@
 'use strict'
 
-import { TableMatrix } from '../lib/index'
+import { TableMatrix } from '../src/index'
 
 test('Test create Object', () => {
   const table = new TableMatrix()
