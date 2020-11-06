@@ -68,5 +68,10 @@
   "dependencies": {
     "@babel/runtime": "7.9.2",
     "@xhubiotable/model": "2.4.2"
+  },
+  "template": {
+    "usedBy": [
+      "xhubioTable/quickstart-source"
+    ]
   }
 }
