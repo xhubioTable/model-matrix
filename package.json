@@ -64,6 +64,6 @@
   },
   "dependencies": {
     "@babel/runtime": "7.13.7",
-    "@xhubiotable/model": "2.4.5"
+    "@xhubiotable/model": "2.4.6"
   }
 }
