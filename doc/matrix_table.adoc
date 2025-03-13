@@ -1,36 +1,31 @@
 == Predecessor Successor Matrix Table
-Predecessor Successor Matrix Table  (short: matrix table) is used to defined changes on an existing state of an application.
-For example there is a decision table for creating an account. Then this table
-may use the created account to add transaction on that account.
 
-The table has a source part and an actions part. The source part refers to a current state.
-The action part defines which state change should be applied.
+The Predecessor Successor Matrix Table (commonly referred to as the "matrix table") is used to define state transitions or changes in an application. For example, if a decision table is used to create an account, this matrix table can specify actions such as adding transactions to that account.
 
-The Matrix itself defines which actions to be applied on which source state.
+The table is typically divided into two main parts:
+* The **source part**: which refers to the current state or existing data.
+* The **action part**: which defines the state changes or actions that should be applied.
 
+The matrix itself maps source states to the corresponding actions, enabling a clear representation of how different inputs trigger different outputs or changes.
 
 === Table Layout
 
-.The matrix table
+.The Matrix Table
 image::images/model-matrix/table.jpg[]
 
-This is an example for a matrix table. It is more about the table looks like,
-not about the values in the table.
+This image illustrates the overall layout of a matrix table. It shows the structure of the table without focusing on specific values.
 
-.The header parts
+.The Header Parts
 image::images/model-matrix/header.jpg[]
 
-The red shows the header definitions. The same header is used for the columns
-and the rows.
+The header areas (highlighted in red) define the meta information for both rows and columns. These headers are critical as they determine how the test cases are identified and processed.
 
-.The source part of the table
+.The Source Part
 image::images/model-matrix/source.jpg[]
 
-It is up to the user which part to choose for the source. But here
-the source is to the left side.
+This portion of the table, usually located on the left, represents the source data or current state of the application. The user can choose which side of the table to designate as the source.
 
-.The action part of the table
+.The Action Part
 image::images/model-matrix/actions.jpg[]
 
-On the right side the action part is located. But this is up to you. The generator
-of the table needs to handle the order in which the generators are executed.
+Typically found on the right side, the action part specifies the state changes or actions to be applied to the source. The matrix table maps these actions to the corresponding source states, and the order of execution is handled by the generator logic within the model.

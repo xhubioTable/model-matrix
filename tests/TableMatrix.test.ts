@@ -1,9 +1,7 @@
-'use strict'
-
-import { TableMatrix } from '../src/index'
+import { TableMatrix, TableMatrixOptions } from '../src/index'
 
 test('Test create Object', () => {
-  const table = new TableMatrix()
+  const table = new TableMatrix({} as TableMatrixOptions)
   expect(table).not.toBeNull()
 })
 
@@ -25,20 +23,33 @@ test('Test getTestcaseForName out of range', () => {
 
 test('Test getTestcaseForName', () => {
   const table = new TableMatrix(MODEL)
-  const tc = table.getTestcaseForName('r1:c2')
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const tc = table.getTestcaseForName('r1:c2') as unknown as any
   delete tc.id
-  delete tc.table
+  tc.table = {
+    tableName: MODEL.tableName
+  }
   delete tc.logger
   expect(tc).toEqual({
-    _neverExecute: false,
-    column: 2,
+    neverExecute: false,
+    columnNumber: 2,
     data: 'x',
-    meta: {
-      column: { name: 'add email', position: 3 },
-      row: { generator: 'Person:3', name: 'Person without email', position: 2 },
+    tableMeta: {
+      fileName: MODEL.fileName,
+      tableName: 'Action on Person',
+      tableType: 'matrix-table'
     },
-    row: 1,
+    columnMeta: { name: 'add email', position: 3 },
+    rowMeta: {
+      generator: 'Person:3',
+      name: 'Person without email',
+      position: 2
+    },
+    rowNumber: 1,
     multiplicity: 1,
+    table: {
+      tableName: MODEL.tableName
+    }
   })
 })
 
@@ -50,48 +61,61 @@ test('Test getTestcasesForExecution', () => {
   /**
    * create the expected data
    */
-  function createExpected(row, column) {
+  function createExpected(rowNumber: number, columnNumber: number) {
     return {
-      _neverExecute: false,
-      data: MODEL.data[row][column],
-      row,
-      column,
-      meta: {
-        row: MODEL.rows[row],
-        column: MODEL.columns[column],
+      neverExecute: false,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      data: MODEL.data![rowNumber][columnNumber],
+      rowNumber,
+      columnNumber,
+      tableMeta: {
+        fileName: MODEL.fileName,
+
+        tableName: 'Action on Person',
+        tableType: 'matrix-table'
       },
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      rowMeta: MODEL.rows![rowNumber],
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      columnMeta: MODEL.columns![columnNumber],
       multiplicity: 1,
+      table: {
+        tableName: MODEL.tableName
+      }
     }
   }
 
-  let genObj = gen.next()
+  const tableName = MODEL.tableName
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let genObj = gen.next() as unknown as any
   delete genObj.value.id
-  delete genObj.value.table
   delete genObj.value.logger
+  genObj.value.table = { tableName }
   expect(genObj.value).toEqual(createExpected(0, 0))
 
   genObj = gen.next()
   delete genObj.value.id
-  delete genObj.value.table
   delete genObj.value.logger
+  genObj.value.table = { tableName }
   expect(genObj.value).toEqual(createExpected(0, 3))
 
   genObj = gen.next()
   delete genObj.value.id
-  delete genObj.value.table
   delete genObj.value.logger
+  genObj.value.table = { tableName }
   expect(genObj.value).toEqual(createExpected(0, 4))
 
   genObj = gen.next()
   delete genObj.value.id
-  delete genObj.value.table
   delete genObj.value.logger
+  genObj.value.table = { tableName }
   expect(genObj.value).toEqual(createExpected(1, 0))
 
   genObj = gen.next()
   delete genObj.value.id
-  delete genObj.value.table
   delete genObj.value.logger
+  genObj.value.table = { tableName }
   expect(genObj.value).toEqual(createExpected(1, 4))
 
   genObj = gen.next()
@@ -100,7 +124,9 @@ test('Test getTestcasesForExecution', () => {
 })
 
 const MODEL = {
-  name: 'Action on Person',
+  fileName: 'myFile.x',
+  tableName: 'Action on Person',
+
   rows: [
     {
       name: 'Person',
@@ -109,40 +135,40 @@ const MODEL = {
       execute: 'x',
       // reference: 'Person:5',
       generator: 'gen::empty',
-      description: 'pers desc',
+      description: 'pers desc'
     },
     {
       name: 'Person without email',
       position: 2,
-      generator: 'Person:3',
-    },
+      generator: 'Person:3'
+    }
   ],
   columns: [
     {
       name: 'KEINE',
       position: 1,
       execute: 'x',
-      generator: 'gen::empty',
+      generator: 'gen::empty'
     },
     {},
     {
       name: 'add email',
-      position: 3,
+      position: 3
     },
     {
       name: 'delete email',
       position: 4,
       execute: 'x',
-      generator: 'Person:4',
+      generator: 'Person:4'
     },
     {
       name: 'change last name',
       position: 5,
-      execute: 'x',
-    },
+      execute: 'x'
+    }
   ],
   data: [
     ['x', undefined, undefined, 'x', 'x'],
-    ['x', undefined, 'x', undefined, 'x'],
-  ],
-}
+    ['x', undefined, 'x', undefined, 'x']
+  ]
+} as unknown as TableMatrixOptions
