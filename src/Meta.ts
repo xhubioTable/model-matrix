@@ -1,4 +1,4 @@
-import { MetaTestcase } from '@tlink/model'
+import { MetaTestcase } from '@xhubiotable/model'
 
 /**
  * Represents the meta information for a row or column in a matrix table.

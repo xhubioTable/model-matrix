@@ -1,12 +1,12 @@
-[**@tlink/model-matrix**](../README.md)
+[**@xhubiotable/model-matrix**](../README.md)
 
 ***
 
-[@tlink/model-matrix](../globals.md) / TestcaseDefinitionMatrix
+[@xhubiotable/model-matrix](../globals.md) / TestcaseDefinitionMatrix
 
 # Class: TestcaseDefinitionMatrix
 
-Defined in: src/TestcaseDefinitionMatrix.ts:68
+Defined in: [src/TestcaseDefinitionMatrix.ts:68](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L68)
 
 Represents a test case in a matrix table.
 
@@ -23,7 +23,7 @@ The class implements the TestcaseDefinitionInterface.
 
 > **new TestcaseDefinitionMatrix**(`opts`): [`TestcaseDefinitionMatrix`](TestcaseDefinitionMatrix.md)
 
-Defined in: src/TestcaseDefinitionMatrix.ts:111
+Defined in: [src/TestcaseDefinitionMatrix.ts:111](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L111)
 
 Constructs a new TestcaseDefinitionMatrix instance.
 
@@ -45,7 +45,7 @@ Options to initialize the test case, including row/column numbers, meta data, ta
 
 > **columnMeta**: [`MetaRowColumn`](../interfaces/MetaRowColumn.md)
 
-Defined in: src/TestcaseDefinitionMatrix.ts:89
+Defined in: [src/TestcaseDefinitionMatrix.ts:89](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L89)
 
 Meta information for the column.
 
@@ -55,7 +55,7 @@ Meta information for the column.
 
 > **columnNumber**: `number`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:83
+Defined in: [src/TestcaseDefinitionMatrix.ts:83](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L83)
 
 The column number from which this test case originates.
 
@@ -65,7 +65,7 @@ The column number from which this test case originates.
 
 > `optional` **data**: `string` \| `number`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:74
+Defined in: [src/TestcaseDefinitionMatrix.ts:74](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L74)
 
 The data for this test case.
 For a decision table, a test case is represented as a column, where the data is stored
@@ -81,7 +81,7 @@ by an identifier corresponding to a value in the row.
 
 > **id**: `string`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:98
+Defined in: [src/TestcaseDefinitionMatrix.ts:98](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L98)
 
 Unique identifier for this test case.
 
@@ -95,7 +95,7 @@ Unique identifier for this test case.
 
 > **logger**: `LoggerInterface`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:77
+Defined in: [src/TestcaseDefinitionMatrix.ts:77](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L77)
 
 Logger instance for this test case model.
 
@@ -109,7 +109,7 @@ Logger instance for this test case model.
 
 > **multiplicity**: `number` = `1`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:101
+Defined in: [src/TestcaseDefinitionMatrix.ts:101](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L101)
 
 Number of instances to generate for this test case (default is 1).
 
@@ -123,7 +123,7 @@ Number of instances to generate for this test case (default is 1).
 
 > **neverExecute**: `boolean` = `false`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:104
+Defined in: [src/TestcaseDefinitionMatrix.ts:104](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L104)
 
 Flag indicating that this test case should never be executed (default is false).
 
@@ -137,7 +137,7 @@ Flag indicating that this test case should never be executed (default is false).
 
 > **rowMeta**: [`MetaRowColumn`](../interfaces/MetaRowColumn.md)
 
-Defined in: src/TestcaseDefinitionMatrix.ts:86
+Defined in: [src/TestcaseDefinitionMatrix.ts:86](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L86)
 
 Meta information for the row.
 
@@ -147,7 +147,7 @@ Meta information for the row.
 
 > **rowNumber**: `number`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:80
+Defined in: [src/TestcaseDefinitionMatrix.ts:80](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L80)
 
 The row number from which this test case originates.
 
@@ -157,7 +157,7 @@ The row number from which this test case originates.
 
 > **table**: [`TableMatrix`](TableMatrix.md)
 
-Defined in: src/TestcaseDefinitionMatrix.ts:92
+Defined in: [src/TestcaseDefinitionMatrix.ts:92](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L92)
 
 A reference to the table (matrix) that contains this test case.
 
@@ -171,7 +171,7 @@ A reference to the table (matrix) that contains this test case.
 
 > **tableMeta**: `MetaTable`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:95
+Defined in: [src/TestcaseDefinitionMatrix.ts:95](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L95)
 
 The meta information of the table.
 
@@ -183,7 +183,7 @@ The meta information of the table.
 
 > **get** **execute**(): `boolean`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:183
+Defined in: [src/TestcaseDefinitionMatrix.ts:183](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L183)
 
 Determines whether this test case should be executed.
 
@@ -207,7 +207,7 @@ True if the test case should be executed, otherwise false.
 
 > **get** **testcaseMeta**(): `MetaTestcase`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:154
+Defined in: [src/TestcaseDefinitionMatrix.ts:154](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L154)
 
 Retrieves the meta information for this test case.
 
@@ -231,7 +231,7 @@ A MetaTestcase object containing file name, table name, table type, and test cas
 
 > **get** **testcaseName**(): `string`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:143
+Defined in: [src/TestcaseDefinitionMatrix.ts:143](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L143)
 
 Retrieves the name of this test case.
 
@@ -249,7 +249,7 @@ The test case name as a string.
 
 > **createFilter**(): `FilterInterface`[]
 
-Defined in: src/TestcaseDefinitionMatrix.ts:129
+Defined in: [src/TestcaseDefinitionMatrix.ts:129](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L129)
 
 Generates and returns all filters associated with this test case.
 
@@ -269,7 +269,7 @@ An array of FilterInterface objects representing the filters.
 
 > **createGeneratorSwitches**(): `string`[]
 
-Defined in: src/TestcaseDefinitionMatrix.ts:132
+Defined in: [src/TestcaseDefinitionMatrix.ts:132](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L132)
 
 Returns a list of generator names that should be skipped during test execution.
 
@@ -289,7 +289,7 @@ An array of generator names as strings.
 
 > **createTags**(): `string`[]
 
-Defined in: src/TestcaseDefinitionMatrix.ts:126
+Defined in: [src/TestcaseDefinitionMatrix.ts:126](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L126)
 
 Generates and returns all tags associated with this test case.
 
@@ -309,7 +309,7 @@ An array of tags (strings) derived from the test case data.
 
 > **createTodos**(): `TestcaseTodosInterface`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:202
+Defined in: [src/TestcaseDefinitionMatrix.ts:202](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L202)
 
 Creates all todo items for this test case definition.
 
@@ -333,7 +333,7 @@ An object containing arrays of generated todos, grouped by type.
 
 > **getFieldName**(`name`): `string`
 
-Defined in: src/TestcaseDefinitionMatrix.ts:172
+Defined in: [src/TestcaseDefinitionMatrix.ts:172](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TestcaseDefinitionMatrix.ts#L172)
 
 Generates a field name for a given input.
 

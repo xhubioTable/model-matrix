@@ -1,12 +1,12 @@
-[**@tlink/model-matrix**](../README.md)
+[**@xhubiotable/model-matrix**](../README.md)
 
 ***
 
-[@tlink/model-matrix](../globals.md) / TableMatrix
+[@xhubiotable/model-matrix](../globals.md) / TableMatrix
 
 # Class: TableMatrix
 
-Defined in: src/TableMatrix.ts:53
+Defined in: [src/TableMatrix.ts:53](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L53)
 
 Represents a matrix table.
 
@@ -23,7 +23,7 @@ It stores the table meta information, row and column meta data, and the actual d
 
 > **new TableMatrix**(`opts`): [`TableMatrix`](TableMatrix.md)
 
-Defined in: src/TableMatrix.ts:85
+Defined in: [src/TableMatrix.ts:85](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L85)
 
 Constructs a new TableMatrix.
 
@@ -45,7 +45,7 @@ Options for initializing the TableMatrix, including file name, table name, logge
 
 > **columns**: [`MetaRowColumn`](../interfaces/MetaRowColumn.md)[] = `[]`
 
-Defined in: src/TableMatrix.ts:72
+Defined in: [src/TableMatrix.ts:72](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L72)
 
 Array of meta information for the columns.
 
@@ -55,7 +55,7 @@ Array of meta information for the columns.
 
 > **data**: (`undefined` \| `string` \| `number`)[][] = `[]`
 
-Defined in: src/TableMatrix.ts:78
+Defined in: [src/TableMatrix.ts:78](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L78)
 
 The matrix data stored as an array of arrays.
 Each inner array represents a row, containing data for each column.
@@ -66,7 +66,7 @@ Each inner array represents a row, containing data for each column.
 
 > **fileName**: `string`
 
-Defined in: src/TableMatrix.ts:63
+Defined in: [src/TableMatrix.ts:63](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L63)
 
 The file name of the table.
 
@@ -80,7 +80,7 @@ The file name of the table.
 
 > **logger**: `LoggerInterface`
 
-Defined in: src/TableMatrix.ts:60
+Defined in: [src/TableMatrix.ts:60](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L60)
 
 Logger instance used for logging.
 
@@ -94,7 +94,7 @@ Logger instance used for logging.
 
 > **rows**: [`MetaRowColumn`](../interfaces/MetaRowColumn.md)[] = `[]`
 
-Defined in: src/TableMatrix.ts:69
+Defined in: [src/TableMatrix.ts:69](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L69)
 
 Array of meta information for the rows.
 
@@ -104,7 +104,7 @@ Array of meta information for the rows.
 
 > **tableName**: `string`
 
-Defined in: src/TableMatrix.ts:66
+Defined in: [src/TableMatrix.ts:66](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L66)
 
 The human-readable name of the table.
 
@@ -118,7 +118,7 @@ The human-readable name of the table.
 
 > `readonly` **tableType**: `string` = `TABLE_TYPE_MATRIX_TABLE`
 
-Defined in: src/TableMatrix.ts:57
+Defined in: [src/TableMatrix.ts:57](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L57)
 
 The type of the table, set to TABLE_TYPE_MATRIX_TABLE.
 
@@ -134,7 +134,7 @@ The type of the table, set to TABLE_TYPE_MATRIX_TABLE.
 
 > **get** **tableMeta**(): `MetaTable`
 
-Defined in: src/TableMatrix.ts:106
+Defined in: [src/TableMatrix.ts:106](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L106)
 
 Retrieves the meta information of the table.
 
@@ -154,7 +154,7 @@ A MetaTable object containing the file name, table name, and table type.
 
 > **createTestcaseName**(`rowNumber`, `columnNumber`): `string`
 
-Defined in: src/TableMatrix.ts:169
+Defined in: [src/TableMatrix.ts:169](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L169)
 
 Creates a test case name for the specified row and column numbers.
 
@@ -184,7 +184,7 @@ A test case name in the format 'r<row>:c<column>'.
 
 > **getTestcaseForName**(`testcaseName`): `TestcaseDefinitionInterface`
 
-Defined in: src/TableMatrix.ts:125
+Defined in: [src/TableMatrix.ts:125](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L125)
 
 Returns the test case for the given name.
 
@@ -220,7 +220,7 @@ Error if the test case name is invalid or out of range.
 
 > **getTestcasesForExecution**(): `Generator`\<`TestcaseDefinitionInterface`, `void`, `unknown`\>
 
-Defined in: src/TableMatrix.ts:181
+Defined in: [src/TableMatrix.ts:181](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L181)
 
 Generator function that yields all test cases that should be executed.
 
@@ -243,7 +243,7 @@ A generator yielding TestcaseDefinitionInterface instances.
 
 > **processRanges**(`testcaseName`): `string`[]
 
-Defined in: src/TableMatrix.ts:230
+Defined in: [src/TableMatrix.ts:230](https://github.com/xhubioTable/model-matrix/blob/76fc22e89969d493f2f9d90b52a84fe1497e0d5a/src/TableMatrix.ts#L230)
 
 Parses a test case name provided as a reference.
 

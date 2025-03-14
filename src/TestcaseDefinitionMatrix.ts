@@ -10,9 +10,9 @@ import {
   TodoReference,
   TodoStatic,
   MetaTestcase
-} from '@tlink/model'
+} from '@xhubiotable/model'
 import { MetaRowColumn } from './Meta'
-import { LoggerInterface } from '@tlink/logger'
+import { LoggerInterface } from '@xhubiotable/logger'
 import { TableMatrix } from './TableMatrix'
 
 /**

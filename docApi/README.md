@@ -1,4 +1,4 @@
-**@tlink/model-matrix**
+**@xhubiotable/model-matrix**
 
 ***
 
@@ -21,36 +21,24 @@ different outputs or changes.
 
 ## Table Layout
 
-<figure>
-<img src="images/model-matrix/table.jpg" alt="table" />
-<figcaption>The Matrix Table</figcaption>
-</figure>
+![The Matrix Table](images/model-matrix/table.jpg)
 
 This image illustrates the overall layout of a matrix table. It shows
 the structure of the table without focusing on specific values.
 
-<figure>
-<img src="images/model-matrix/header.jpg" alt="header" />
-<figcaption>The Header Parts</figcaption>
-</figure>
+![The Header Parts](images/model-matrix/header.jpg)
 
 The header areas (highlighted in red) define the meta information for
 both rows and columns. These headers are critical as they determine how
 the test cases are identified and processed.
 
-<figure>
-<img src="images/model-matrix/source.jpg" alt="source" />
-<figcaption>The Source Part</figcaption>
-</figure>
+![The Source Part](images/model-matrix/source.jpg)
 
 This portion of the table, usually located on the left, represents the
 source data or current state of the application. The user can choose
 which side of the table to designate as the source.
 
-<figure>
-<img src="images/model-matrix/actions.jpg" alt="actions" />
-<figcaption>The Action Part</figcaption>
-</figure>
+![The Action Part](images/model-matrix/actions.jpg)
 
 Typically found on the right side, the action part specifies the state
 changes or actions to be applied to the source. The matrix table maps

@@ -2,8 +2,8 @@ import {
   MetaTable,
   TableInterface,
   TestcaseDefinitionInterface
-} from '@tlink/model'
-import { LoggerInterface } from '@tlink/logger'
+} from '@xhubiotable/model'
+import { LoggerInterface } from '@xhubiotable/logger'
 import { MetaRowColumn } from './Meta'
 import { TestcaseDefinitionMatrix } from './TestcaseDefinitionMatrix'
 import { TABLE_TYPE_MATRIX_TABLE } from './constants'

@@ -1,8 +1,8 @@
-[**@tlink/model-matrix**](README.md)
+[**@xhubiotable/model-matrix**](README.md)
 
 ***
 
-# @tlink/model-matrix
+# @xhubiotable/model-matrix
 
 ## Classes
 
