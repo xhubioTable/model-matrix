@@ -1,46 +1,16 @@
-**@xhubiotable/model-matrix**
+# ⚠️ DEPRECATED
 
-***
+This package has been deprecated.
 
-# Predecessor Successor Matrix Table
+All `@xhubiotable/*` packages have been consolidated into a single package:
 
-The Predecessor Successor Matrix Table (commonly referred to as the
-"matrix table") is used to define state transitions or changes in an
-application. For example, if a decision table is used to create an
-account, this matrix table can specify actions such as adding
-transactions to that account.
+## **[@xhubio/nanook-table](https://www.npmjs.com/package/@xhubio/nanook-table)**
 
-The table is typically divided into two main parts: \* The **source
-part**: which refers to the current state or existing data. \* The
-**action part**: which defines the state changes or actions that should
-be applied.
+Please update your dependencies:
 
-The matrix itself maps source states to the corresponding actions,
-enabling a clear representation of how different inputs trigger
-different outputs or changes.
+```bash
+npm uninstall @xhubiotable/model-matrix
+npm install @xhubio/nanook-table
+```
 
-## Table Layout
-
-![The Matrix Table](doc/images/model-matrix/table.jpg)
-
-This image illustrates the overall layout of a matrix table. It shows
-the structure of the table without focusing on specific values.
-
-![The Header Parts](doc/images/model-matrix/header.jpg)
-
-The header areas (highlighted in red) define the meta information for
-both rows and columns. These headers are critical as they determine how
-the test cases are identified and processed.
-
-![The Source Part](doc/images/model-matrix/source.jpg)
-
-This portion of the table, usually located on the left, represents the
-source data or current state of the application. The user can choose
-which side of the table to designate as the source.
-
-![The Action Part](doc/images/model-matrix/actions.jpg)
-
-Typically found on the right side, the action part specifies the state
-changes or actions to be applied to the source. The matrix table maps
-these actions to the corresponding source states, and the order of
-execution is handled by the generator logic within the model.
+For migration details, see the [nanook-table documentation](https://github.com/xhubio/nanook-table).
